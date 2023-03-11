@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser API: Local Storage</title>
+    <style>
+        
+        main, header{
+            width: 1080px;
+            margin: 0 auto;
+        }
+        label{
+            display: block;
+        }
+        .btn-delete{
+            background-color: crimson;
+            height: 30px;
+            border: 0;
+            color: white;
+        }
+        .btn-delete:focus{
+            border: 2px solid gold;
+        }
+        .btn-send{
+            background-color: limegreen;
+            height: 30px;
+            border: 0;
+            color: white;
+        }
+        .btn-send:focus{
+            border: 2px solid crimson;
+        }
+        #btn-reset{
+            background-color: orangered;
+            height: 30px;
+            border: 0;
+            color: white;
+        }
+        #btn-reset:focus{
+            border: 2px solid goldenrod
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Please Contact Me</h1>
+    </header>
+    <main>
+        <div>
+            <label for="name" id="name">Name</label>
+            <input type="text" name="name" id="name-field" placeholder="Name">
+            <button id="btn-delete-name" onclick="deleteName()" class="btn-delete">Delete Name</button>
+            <button id="btn-send-name" onclick="sendName()" class="btn-send">Send Name</button>
+        </div>
+        <div>
+            <label for="email" id="email">Email</label>
+            <input type="text" name="email" id="email-field" placeholder="Email">
+            <button id="btn-delete-email" onclick="deleteEmail()" class="btn-delete">Delete Email</button>
+            <button id="btn-send-email" onclick="sendEmail()" class="btn-send">Send Email</button>
+        </div>
+        <div>
+            <label for="message" id="message">Message</label>
+            <textarea name="message" cols="22" rows="2" id="message-field" placeholder="Message"></textarea>
+            <button id="btn-delete-message" onclick="deleteMessage()" class="btn-delete">Delete Message</button>
+            <button id="btn-send-message" onclick="sendMessage()" class="btn-send">Send Message</button>
+        </div>
+        <div>
+            <button id="btn-send" onclick="sendUser()" class="btn-send">Send</button>
+            <button id="btn-reset" onclick="resetLocalStorage()">Reset</button>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="js/level3.js"></script>
+</body>
+</html>
